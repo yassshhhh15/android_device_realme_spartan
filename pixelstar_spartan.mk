@@ -12,9 +12,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/realme/spartan/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/pixelstar/config/common_full_phone.mk)
 
-PRODUCT_NAME := aosp_spartan
+PRODUCT_NAME := pixelstar_spartan
 PRODUCT_DEVICE := spartan
 PRODUCT_MANUFACTURER := realme
 PRODUCT_BRAND := realme
@@ -32,6 +32,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 BUILD_FINGERPRINT := realme/RMX3371/RE54E4L1:14/UP1A.230620.001/S.14bef93_5a18-26df2:user/release-keys
 
+# PixelStar Flags
 TARGET_FACE_UNLOCK_SUPPORTED := true
 USE_PIXEL_CHARGER := true
 TARGET_INCLUDE_LIVE_WALLPAPERS := true
@@ -41,5 +42,7 @@ TARGET_INCLUDE_CARRIER_SETTINGS := true
 TARGET_SUPPORTS_NOW_PLAYING := true
 TARGET_SUPPORTS_PREBUILT_UPDATABLE_APEX := false
 TARGET_SUPPORTS_GOOGLE_BATTERY := false
-TARGET_SUPPORTS_CLEAR_CALLING := true
+TARGET_USES_BLUR_RECENT := true
+PIXELSTAR_BUILD_TYPE := official
+
 
